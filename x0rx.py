@@ -69,6 +69,9 @@ if("WordPress" in soup2):
         json = json.loads(r2.content.decode('utf-8'))
         for x in json[0:20]:
             print("\n[*] USER: {u}\n[*] ID: {i}".format(u=x['name'],i=x['id']))
+    else:
+	print("[*] Não encontramos o campo json")
+	sys.exit(0)
 else:
     print("[*] O site não é baseado em WordPress")
     sys.exit()
